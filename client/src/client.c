@@ -105,6 +105,8 @@ void paquete(int conexion)
 	char* leido = NULL;
 	t_paquete* paquete = crear_paquete();
 
+	leido = readline("> ");
+
 	// Leemos y esta vez agregamos las lineas al paquete
 	while(strcmp(leido, "") != 0){
 		agregar_a_paquete(paquete, leido, strlen(leido) + 1);
